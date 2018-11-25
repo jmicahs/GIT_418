@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+	
+	<style>
+		p.bold { font-weight: bold; }
+	</style>
+</head>
+<body>
+
+	<p id="demoText">Demo text or link</p>
+	
+	<p id="removeBold">Click here to remove the bold font-weight</p>
+
+	<!-- Option A: link to jQuery library (Google API in this example) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Option B: locally downloaded copy of jQuery library -->
+	<script src="jquery-x.y.z.js"></script>
+	
+	<script>
+		function demoFunction() {
+			$("p").addClass("bold");
+		}
+
+		function alertText() {
+			alert("Thanks for clicking on this!");
+		}
+		
+		function removeBoldClass() {
+			$("p").removeClass("bold");
+		}
+
+		$("p#removeBold").click(removeBoldClass);
+		$("p#demoText").click(alertText);
+		$(document).ready(demoFunction);
+	</script>
+</body>
+</html>
